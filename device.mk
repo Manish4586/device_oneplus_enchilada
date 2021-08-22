@@ -26,8 +26,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay
 
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
@@ -40,12 +39,8 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_SCREEN_HEIGHT := 2280
 TARGET_SCREEN_WIDTH := 1080
 
-# Pocket mode
-PRODUCT_PACKAGES += \
-    OnePlusPocketMode
-
 # Inherit from oneplus sdm845-common
-$(call inherit-product, device/oneplus/sdm845-common/common.mk)
+$(call inherit-product, device/oneplus/sdm845-common/sdm845.mk)
 
 # Inherit from vendor blobs
 #$(call inherit-product, vendor/oneplus/enchilada/enchilada-vendor.mk)
