@@ -31,13 +31,12 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
 
-# Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2280
 TARGET_SCREEN_WIDTH := 1080
+
+# OTA
+TARGET_OTA_ASSERT_DEVICE := oneplus6,OnePlus6,enchilada
 
 # Inherit from oneplus sdm845-common
 $(call inherit-product, device/oneplus/sdm845-common/sdm845.mk)
